@@ -126,6 +126,7 @@ if (!class_exists('PDO'))
 	exit("Could not find the the PDO PHP extension.");
 }
 
+define('ADMIN_OWNER', 5);
 define('ADMIN_HGM', 4);
 define('ADMIN_GM', 3);
 define('ADMIN_GUARDIAN', 2);
@@ -139,7 +140,7 @@ define('RACE_ORC', 3);
 define('RACE_SKELETON', 4);
 define('RACE_PANDA', 5);
 define('RACE_FISH', 6);
-define('RACE_FISH2', 7);
+define('RACE_AXOLYTL', 7);
 define('RACE_LIZARD', 8);
 define('RACE_SQUIRREL', 9);
 define('RACE_BIRD', 10);
@@ -811,6 +812,11 @@ if (isset($userdata[0]))
 		{
 			$tpl->HGM = $HGM = true;
 		}
+
+		if ($cd['admin'] <= ADMIN_OWNER)
+		{
+			$tpl->HGM = $HGM = true;
+		}
 		
 		if ($cd['guild'])
 		{
@@ -1081,10 +1087,10 @@ function race_str($race)
 		'Human (Yellow)',
 		'Human (Tan)',
 		'Orc',
-		'Panda',
 		'Skeleton',
+		'Panda',
 		'Fish',
-		'Fish2',
+		'Axolytl',
 		'Lizard',
 		'Squirrel',
 		'Bird',
@@ -1102,7 +1108,8 @@ function adminrank_str($admin)
 		'Light Guide',
 		'Guardian',
 		'Game Master',
-		'High Game Master'
+		'High Game Master',
+		'Owner'	
 	);
 	
 	return isset($table[$admin])?$table[$admin]:'Unknown';

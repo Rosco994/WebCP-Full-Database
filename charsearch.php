@@ -41,6 +41,7 @@ if (isset($_POST['name']))
 			case ADMIN_GUARDIAN: $character['admin_str'] = 'Guardian'; $character['gm'] = true; break;
 			case ADMIN_GM: $character['admin_str'] = 'Game Master'; $character['gm'] = true; break;
 			case ADMIN_HGM: $character['admin_str'] = 'High Game Master'; $character['gm'] = true; break;
+			case ADMIN_OWNER: $character['admin_str'] = 'Owner'; $character['gm'] = true; break;
 			default: $character['admin_str'] = 'Unknown'; break;
 		}
 	}

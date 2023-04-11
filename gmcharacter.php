@@ -55,10 +55,10 @@ switch ($character['race'])
 	case RACE_WHITE: $character['race'] = 'Human (White)'; break;
 	case RACE_YELLOW: $character['race'] = 'Human (Yellow)'; break;
 	case RACE_TAN: $character['race'] = 'Human (Tan)'; break;
-	case RACE_PANDA: $character['race'] = 'Panda'; break;
 	case RACE_SKELETON: $character['race'] = 'Skeleton'; break;
+	case RACE_PANDA: $character['race'] = 'Panda'; break;
 	case RACE_FISH: $character['race'] = 'Fish'; break;
-	case RACE_FISH2: $character['race'] = 'Fish (alt)'; break;
+	case RACE_AXOLYTL: $character['race'] = 'Axolytl'; break;
 	case RACE_LIZARD: $character['race'] = 'Lizard'; break;
 	case RACE_SQUIRREL: $character['race'] = 'Squirrel'; break;
 	case RACE_BIRD: $character['race'] = 'Bird'; break;
@@ -74,6 +74,7 @@ switch ($character['admin'])
 	case ADMIN_GUARDIAN: $character['admin_str'] = 'Guardian'; break;
 	case ADMIN_GM: $character['admin_str'] = 'Game Master'; break;
 	case ADMIN_HGM: $character['admin_str'] = 'High Game Master'; break;
+	case ADMIN_OWNER: $character['admin_str'] = 'Owner'; break;
 	default: $character['admin_str'] = 'Unknown'; break;
 }
 
